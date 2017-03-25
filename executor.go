@@ -1179,6 +1179,12 @@ func (executor *Executor) completeValueCatchingError(reqCtx *RequestContext, obj
 func (executor *Executor) completeValue(reqCtx *RequestContext, objectType *ObjectTypeDefinition, fieldType ASTNode, field *Field, result interface{}, subSelectionSet *SelectionSet) (interface{}, error) {
 	//var err error
 	//log.Printf("completing value on %#v", result)
+	if _, ok := result.(map[string]interface{}); ok {
+		if len(subSelectionSet.Selections) == 0 {
+			panic(fmt.Sprintf("Warning: The %s parameter object has no properties",
+				field.Name.Value))
+		}
+	}
 	if nonNullType, ok := fieldType.(*NonNullType); ok {
 		innerType := nonNullType.Type
 		completedResult, err := executor.completeValue(reqCtx, objectType, innerType, field, result, subSelectionSet)
