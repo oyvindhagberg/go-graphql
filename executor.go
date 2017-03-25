@@ -11,8 +11,8 @@ import (
 
 	"sync"
 
-	. "github.com/playlyfe/go-graphql/language"
-	"github.com/playlyfe/go-graphql/utils"
+	. "github.com/oyvindhagberg/go-graphql/language"
+	"github.com/oyvindhagberg/go-graphql/utils"
 )
 
 type ResolveParams struct {

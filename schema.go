@@ -3,7 +3,7 @@ package graphql
 import (
 	"fmt"
 
-	. "github.com/playlyfe/go-graphql/language"
+	. "github.com/oyvindhagberg/go-graphql/language"
 )
 
 type Schema struct {

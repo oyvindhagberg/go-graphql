@@ -2,9 +2,10 @@ package graphql_test
 
 import (
 	"fmt"
-	"github.com/graphql-go/graphql"
-	pgql "github.com/playlyfe/go-graphql"
 	"testing"
+
+	"github.com/graphql-go/graphql"
+	pgql "github.com/oyvindhagberg/go-graphql"
 )
 
 var query = `

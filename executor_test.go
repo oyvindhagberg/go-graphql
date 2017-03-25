@@ -4,9 +4,10 @@ import (
 	"encoding/json"
 	"errors"
 	"fmt"
-	. "github.com/playlyfe/go-graphql/language"
-	. "github.com/smartystreets/goconvey/convey"
 	"testing"
+
+	. "github.com/oyvindhagberg/go-graphql/language"
+	. "github.com/smartystreets/goconvey/convey"
 )
 
 type Author struct {
