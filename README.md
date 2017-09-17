@@ -15,9 +15,12 @@ import (
 
 func main() {
 	schema := `
+	## double hashed comments be parsed as descriptions and show up in
+	## introspection queries
 	interface Pet {
 	    name: String
 	}
+	# this is an internal comment
 	type Dog implements Pet {
 	    name: String
 	    woofs: Boolean
